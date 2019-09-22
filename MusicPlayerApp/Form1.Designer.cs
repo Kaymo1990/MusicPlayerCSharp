@@ -30,8 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MusicPlayerApp));
             this.TopPanel = new System.Windows.Forms.Panel();
-            this.LblLogo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.LblLogo = new System.Windows.Forms.Label();
+            this.ListBoxSongs = new System.Windows.Forms.ListBox();
+            this.btnSelectSongs = new System.Windows.Forms.Button();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -47,6 +49,16 @@
             this.TopPanel.Size = new System.Drawing.Size(800, 61);
             this.TopPanel.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(751, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(49, 48);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // LblLogo
             // 
             this.LblLogo.AutoSize = true;
@@ -58,15 +70,27 @@
             this.LblLogo.Text = "Musi-Kay Player";
             this.LblLogo.Click += new System.EventHandler(this.LblLogo_Click);
             // 
-            // pictureBox1
+            // ListBoxSongs
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(751, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(49, 48);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.ListBoxSongs.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.ListBoxSongs.FormattingEnabled = true;
+            this.ListBoxSongs.ItemHeight = 16;
+            this.ListBoxSongs.Location = new System.Drawing.Point(668, 67);
+            this.ListBoxSongs.Name = "ListBoxSongs";
+            this.ListBoxSongs.Size = new System.Drawing.Size(120, 308);
+            this.ListBoxSongs.TabIndex = 2;
+            // 
+            // btnSelectSongs
+            // 
+            this.btnSelectSongs.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSelectSongs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelectSongs.ForeColor = System.Drawing.Color.AliceBlue;
+            this.btnSelectSongs.Location = new System.Drawing.Point(668, 392);
+            this.btnSelectSongs.Name = "btnSelectSongs";
+            this.btnSelectSongs.Size = new System.Drawing.Size(120, 46);
+            this.btnSelectSongs.TabIndex = 3;
+            this.btnSelectSongs.Text = "Select Song";
+            this.btnSelectSongs.UseVisualStyleBackColor = false;
             // 
             // MusicPlayerApp
             // 
@@ -74,6 +98,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSelectSongs);
+            this.Controls.Add(this.ListBoxSongs);
             this.Controls.Add(this.TopPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MusicPlayerApp";
@@ -91,6 +117,8 @@
         private System.Windows.Forms.Panel TopPanel;
         private System.Windows.Forms.Label LblLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ListBox ListBoxSongs;
+        private System.Windows.Forms.Button btnSelectSongs;
     }
 }
 
