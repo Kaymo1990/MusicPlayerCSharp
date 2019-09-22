@@ -51,6 +51,7 @@
             this.TopPanel.Name = "TopPanel";
             this.TopPanel.Size = new System.Drawing.Size(800, 61);
             this.TopPanel.TabIndex = 0;
+            this.TopPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.TopPanel_Paint);
             // 
             // pictureBox1
             // 
@@ -101,10 +102,10 @@
             // axWindowsMediaPlayerMusic
             // 
             this.axWindowsMediaPlayerMusic.Enabled = true;
-            this.axWindowsMediaPlayerMusic.Location = new System.Drawing.Point(19, 67);
+            this.axWindowsMediaPlayerMusic.Location = new System.Drawing.Point(19, 59);
             this.axWindowsMediaPlayerMusic.Name = "axWindowsMediaPlayerMusic";
             this.axWindowsMediaPlayerMusic.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayerMusic.OcxState")));
-            this.axWindowsMediaPlayerMusic.Size = new System.Drawing.Size(425, 289);
+            this.axWindowsMediaPlayerMusic.Size = new System.Drawing.Size(425, 296);
             this.axWindowsMediaPlayerMusic.TabIndex = 4;
             this.axWindowsMediaPlayerMusic.Enter += new System.EventHandler(this.AxWindowsMediaPlayerMusic_Enter);
             // 

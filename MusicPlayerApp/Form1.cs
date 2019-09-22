@@ -17,7 +17,7 @@ namespace MusicPlayerApp
             InitializeComponent();
         }
         String[] paths, files;
-
+        int trackNumber = 1;
         private void LblLogo_Click(object sender, EventArgs e)
         {
 
@@ -40,7 +40,8 @@ namespace MusicPlayerApp
 
                 for (int i = 0; i < files.Length; i++)
                 {
-                    ListBoxSongs.Items.Add(files[i]);
+                    ListBoxSongs.Items.Add(trackNumber.ToString() + ". " + files[i]);
+                    trackNumber++;
                 }
             }
         }
@@ -48,6 +49,11 @@ namespace MusicPlayerApp
         private void ListBoxSongs_SelectedIndexChanged(object sender, EventArgs e)
         {
             axWindowsMediaPlayerMusic.URL = paths[ListBoxSongs.SelectedIndex];
+        }
+
+        private void TopPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         private void AxWindowsMediaPlayerMusic_Enter(object sender, EventArgs e)
