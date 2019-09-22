@@ -29,6 +29,27 @@ namespace MusicPlayerApp
             this.Close();
         }
 
+        private void BtnSelectSongs_Click(object sender, EventArgs e)
+        {
+            var openFileDialog = new OpenFileDialog();
+            openFileDialog.Multiselect = true;
+            if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                files = openFileDialog.SafeFileNames; //save tracknames in files array
+                paths = openFileDialog.FileNames; //save pathnames in paths array
+
+                for (int i = 0; i < files.Length; i++)
+                {
+                    ListBoxSongs.Items.Add(files[i]);
+                }
+            }
+        }
+
+        private void ListBoxSongs_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayerMusic.URL = paths[ListBoxSongs.SelectedIndex];
+        }
+
         private void AxWindowsMediaPlayerMusic_Enter(object sender, EventArgs e)
         {
 

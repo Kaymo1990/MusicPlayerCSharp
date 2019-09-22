@@ -79,30 +79,32 @@
             this.ListBoxSongs.ForeColor = System.Drawing.SystemColors.WindowText;
             this.ListBoxSongs.FormattingEnabled = true;
             this.ListBoxSongs.ItemHeight = 16;
-            this.ListBoxSongs.Location = new System.Drawing.Point(668, 67);
+            this.ListBoxSongs.Location = new System.Drawing.Point(611, 67);
             this.ListBoxSongs.Name = "ListBoxSongs";
-            this.ListBoxSongs.Size = new System.Drawing.Size(120, 292);
+            this.ListBoxSongs.Size = new System.Drawing.Size(177, 308);
             this.ListBoxSongs.TabIndex = 2;
+            this.ListBoxSongs.SelectedIndexChanged += new System.EventHandler(this.ListBoxSongs_SelectedIndexChanged);
             // 
             // btnSelectSongs
             // 
             this.btnSelectSongs.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnSelectSongs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSelectSongs.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btnSelectSongs.Location = new System.Drawing.Point(668, 392);
+            this.btnSelectSongs.Location = new System.Drawing.Point(611, 392);
             this.btnSelectSongs.Name = "btnSelectSongs";
-            this.btnSelectSongs.Size = new System.Drawing.Size(120, 46);
+            this.btnSelectSongs.Size = new System.Drawing.Size(177, 46);
             this.btnSelectSongs.TabIndex = 3;
             this.btnSelectSongs.Text = "Select Song";
             this.btnSelectSongs.UseVisualStyleBackColor = false;
+            this.btnSelectSongs.Click += new System.EventHandler(this.BtnSelectSongs_Click);
             // 
             // axWindowsMediaPlayerMusic
             // 
             this.axWindowsMediaPlayerMusic.Enabled = true;
-            this.axWindowsMediaPlayerMusic.Location = new System.Drawing.Point(19, 78);
+            this.axWindowsMediaPlayerMusic.Location = new System.Drawing.Point(19, 67);
             this.axWindowsMediaPlayerMusic.Name = "axWindowsMediaPlayerMusic";
             this.axWindowsMediaPlayerMusic.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayerMusic.OcxState")));
-            this.axWindowsMediaPlayerMusic.Size = new System.Drawing.Size(451, 238);
+            this.axWindowsMediaPlayerMusic.Size = new System.Drawing.Size(425, 289);
             this.axWindowsMediaPlayerMusic.TabIndex = 4;
             this.axWindowsMediaPlayerMusic.Enter += new System.EventHandler(this.AxWindowsMediaPlayerMusic_Enter);
             // 
