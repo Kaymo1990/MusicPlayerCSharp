@@ -34,8 +34,11 @@
             this.LblLogo = new System.Windows.Forms.Label();
             this.ListBoxSongs = new System.Windows.Forms.ListBox();
             this.btnSelectSongs = new System.Windows.Forms.Button();
+            this.axWindowsMediaPlayerMusic = new AxWMPLib.AxWindowsMediaPlayer();
+            this.lblFooter = new System.Windows.Forms.Label();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayerMusic)).BeginInit();
             this.SuspendLayout();
             // 
             // TopPanel
@@ -58,6 +61,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
             // LblLogo
             // 
@@ -77,7 +81,7 @@
             this.ListBoxSongs.ItemHeight = 16;
             this.ListBoxSongs.Location = new System.Drawing.Point(668, 67);
             this.ListBoxSongs.Name = "ListBoxSongs";
-            this.ListBoxSongs.Size = new System.Drawing.Size(120, 308);
+            this.ListBoxSongs.Size = new System.Drawing.Size(120, 292);
             this.ListBoxSongs.TabIndex = 2;
             // 
             // btnSelectSongs
@@ -92,12 +96,34 @@
             this.btnSelectSongs.Text = "Select Song";
             this.btnSelectSongs.UseVisualStyleBackColor = false;
             // 
+            // axWindowsMediaPlayerMusic
+            // 
+            this.axWindowsMediaPlayerMusic.Enabled = true;
+            this.axWindowsMediaPlayerMusic.Location = new System.Drawing.Point(19, 78);
+            this.axWindowsMediaPlayerMusic.Name = "axWindowsMediaPlayerMusic";
+            this.axWindowsMediaPlayerMusic.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayerMusic.OcxState")));
+            this.axWindowsMediaPlayerMusic.Size = new System.Drawing.Size(451, 238);
+            this.axWindowsMediaPlayerMusic.TabIndex = 4;
+            this.axWindowsMediaPlayerMusic.Enter += new System.EventHandler(this.AxWindowsMediaPlayerMusic_Enter);
+            // 
+            // lblFooter
+            // 
+            this.lblFooter.AutoSize = true;
+            this.lblFooter.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lblFooter.Location = new System.Drawing.Point(298, 441);
+            this.lblFooter.Name = "lblFooter";
+            this.lblFooter.Size = new System.Drawing.Size(146, 17);
+            this.lblFooter.TabIndex = 5;
+            this.lblFooter.Text = "Developed by Kay Mo";
+            // 
             // MusicPlayerApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 465);
+            this.Controls.Add(this.lblFooter);
+            this.Controls.Add(this.axWindowsMediaPlayerMusic);
             this.Controls.Add(this.btnSelectSongs);
             this.Controls.Add(this.ListBoxSongs);
             this.Controls.Add(this.TopPanel);
@@ -108,7 +134,9 @@
             this.TopPanel.ResumeLayout(false);
             this.TopPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayerMusic)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -119,6 +147,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ListBox ListBoxSongs;
         private System.Windows.Forms.Button btnSelectSongs;
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayerMusic;
+        private System.Windows.Forms.Label lblFooter;
     }
 }
 

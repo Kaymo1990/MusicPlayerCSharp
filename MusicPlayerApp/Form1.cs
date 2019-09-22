@@ -16,8 +16,20 @@ namespace MusicPlayerApp
         {
             InitializeComponent();
         }
+        String[] paths, files;
 
         private void LblLogo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+            //close app
+            this.Close();
+        }
+
+        private void AxWindowsMediaPlayerMusic_Enter(object sender, EventArgs e)
         {
 
         }
